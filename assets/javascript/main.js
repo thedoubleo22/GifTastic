@@ -12,7 +12,7 @@ $(document).ready(function () {
     ]
 
     var API_KEY = "dc6zaTOxFJmzC&limit=10";
-    var requestUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + API_KEY + "&limit=10&q=";
+    var queryUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + API_KEY + "&limit=10&q=";
 
 
     for (var i = 0; i < topics.length; i++) {
@@ -46,7 +46,7 @@ $(document).ready(function () {
         $("#gifs").empty();
         $.ajax({
             method: "GET",
-            url: requestUrl + $(this).text()
+            url: queryUrl + $(this).text()
         }).then(function (response) {
 
             for (var i = 0; i < response.data.length; i++) {
