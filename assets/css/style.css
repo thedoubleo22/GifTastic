@@ -21,6 +21,7 @@ button {
 .btn-info{
     background-color: orange;
     border-color: orange;
+    font-family: marker felt, fantasy;
 }
 img {
     margin: 10px;
